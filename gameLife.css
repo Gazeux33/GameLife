@@ -1,5 +1,5 @@
 body {
-    background-color: darkslategrey;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
 }
@@ -7,3 +7,19 @@ body {
 #defaultCanvas0{
     border: 2px solid white;
 }
+
+.controller {
+    height: 150px;
+    color: aliceblue;
+    background-color: black;
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.controller input {
+    margin: 2px 0;
+}
+
+
+
