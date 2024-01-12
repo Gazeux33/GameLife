@@ -1,18 +1,10 @@
-const submitButton = document.getElementById('update')
+
 const inputSize = document.getElementById('size')
-
-const inputFps = document.getElementById('fps')
-const fpsDisplay = document.getElementById('fpsValue')
-
 const inputColorBg = document.getElementById('background')
-
 const inputColorCell = document.getElementById('cell')
-
-const inputColorLine = document.getElementById('line')
 const sizeValueDisplay = document.getElementById('sizeValue');
 
 const screenSize = window.innerHeight*0.7;
-console.log(screenSize);
 
 let bgColor;
 let cellColor;
@@ -24,32 +16,23 @@ const newMatrice = [];
 const startCell = [];
 
 
-inputSize.addEventListener('change', updateSizeDisplay);
-inputFps.addEventListener('change', updateFpsDisplay);
+inputSize.addEventListener('change', update);
+inputColorBg.addEventListener('change',update)
+inputColorCell.addEventListener('change',update)
 
-submitButton.addEventListener('click',(e)=>{
+
+function update() {
+  sizeValueDisplay.textContent = inputSize.value;
   getVar()
   setup()
-})
-
-function updateSizeDisplay() {
-  sizeValueDisplay.textContent = inputSize.value;
-}
-
-function updateFpsDisplay() {
-  
-  fpsValue.textContent = inputFps.value;
 }
 
 function getVar(){
-  fps = inputFps.value
   bgColor = inputColorBg.value
   cellColor = inputColorCell.value
   matriceSize = inputSize.value
   cellSize =  screenSize/matriceSize
 }
-
-
 
 getVar()
 updateSizeDisplay();
